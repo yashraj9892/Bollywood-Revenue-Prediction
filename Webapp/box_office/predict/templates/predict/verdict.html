@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load staticfiles %}
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href={% static 'predict/css/bootstrap.min.css' %}>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+  integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+  crossorigin="anonymous">
+
+  <!-- Custom CSS Files -->
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href={% static 'predict/css/movieform.css' %}>
+  <link rel="stylesheet" type="text/css" href={% static 'predict/css/formTheme.css' %}>
+  <style>
+    .info-holder p.register-info-left{
+      line-height: 28px;
+    }
+  </style>
+{% load staticfiles %}
+<link rel="stylesheet" href={% static 'predict/css/animation.css' %} type="text/css">
+  
+  <title>Movie Revenue Predictor</title>
+</head>
+
+<body>
+<div>
+<div class="pyro">
+    <div class="before"></div>
+    <div class="after"></div>
+</div>
+</div>
+  <div class="form-body" class="container-fluid">
+    <div class="website-logo">
+    </div>
+    <div class="row">
+      <div class="img-holder">
+        <div class="bg"></div>
+      </div>
+	<div>
+       		<h1 class="heading" style="position:absolute;margin-left:950px;font-size:100px">Final Verdict</h1>
+		<form>
+			{% csrf_token %}
+			<p><h1 class="heading"  style="position:absolute;margin-left:950px;font-size:70px;margin-top: 150px;">{{movie_name}}</h1><\p>
+			<h2 class="heading"  style="position:absolute;margin-left:950px;font-size:70px;margin-top: 250px;">Verdict</h2>
+			<p><h2 class="heading"  style="position:absolute;margin-left: 1252px;font-size:70px;margin-top: 236px;">{{Verdict}}</h2><\p>
+			<h2 class="heading"  style="position:absolute;margin-left:950px;font-size:70px;margin-top: 350px;">Revenue</h2>
+			<p><h2 class="heading"  style="position:absolute;margin-left: 1252px;font-size:70px;margin-top: 337px;">{{Revenue}}</h2><\p>
+		</form>
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+  crossorigin="anonymous"></script>
+  
+  <!-- Custom JS File -->
+  {% load staticfiles %}
+  <script type="text/javascript" src={% static 'predict/js/main.js' %}></script>
+</body>
+
+</html>
