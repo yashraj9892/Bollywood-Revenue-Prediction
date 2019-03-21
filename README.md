@@ -21,9 +21,9 @@ If the number of features is large, one may not need to map data to a higher dim
 
 Model               | Accuracy                 | Recommendation
 ------------------- | ------------------------ | ------------
-Linear Model        | 0.77                     | definitely
+Linear Model        | 0.82                     | definitely
 SVM linear kernel   | 0.53                     | can use
-Naive Bayes         | 0.40                     | prefer this for hit/superhit
+Naive Bayes         | 0.51                     | prefer this for hit/superhit
 KNN                 | 0.52                     | gives all flop - dont use
 Logistic Regression | 0.56                     | little better than knn - dont use
 Randforest          | 0.56(Gini)/0.57(Entropy) | same problem as KNN - dont use
@@ -61,6 +61,6 @@ Flow_Diagram ![picture alt](https://github.com/yashraj9892/Bollywood-Revenue-Pre
 ### ACCURACY ###
 
   output  = accuracy of (Naive Bayes)*accuracy(linear Regression)
-  output  = 30.8%
+  output  = 41.82%
 
 
